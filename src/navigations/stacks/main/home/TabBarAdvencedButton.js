@@ -2,7 +2,7 @@ import React from 'react'
 import {StyleSheet, TouchableOpacity, View, Text} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import {useSelector} from 'react-redux'
-import {COLORS} from '../../../../../config/constants'
+import {COLORS, TAB_BAR_HEIGHT} from '../../../../../config/constants'
 import {TabBg} from '../../../../svg/TabBg'
 
 export const TabBarAdvancedButton = ({
@@ -27,7 +27,7 @@ export const TabBarAdvancedButton = ({
           width: item_size * 0.65,
           height: item_size * 0.65,
           borderRadius: (item_size * 0.65) / 2,
-          top: -2,
+          top: (-TAB_BAR_HEIGHT * 0.3) / 2,
         }}
         onPress={onPress}>
         <Icon name={iconName} color={COLORS.whiteColor} size={20} />

@@ -98,14 +98,13 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: TAB_BAR_HEIGHT,
   },
   button: {
     flex: 1,
   },
   buttonContent: {
     width: item_size,
-    height: TAB_BAR_HEIGHT,
+    height: 51,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
