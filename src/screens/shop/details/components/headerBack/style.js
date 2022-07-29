@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native'
+import {Platform, StyleSheet} from 'react-native'
 import {
   BORDER_RADIUS,
   COLORS,
@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     position: 'absolute',
-    top: 0,
+    top: Platform.OS === 'ios' ? 15 : 0,
     left: 0,
     right: 0,
     zIndex: 3,

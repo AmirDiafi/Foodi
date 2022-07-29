@@ -7,7 +7,7 @@ import {
   Text,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import {COLORS, TAB_BAR_HEIGHT} from '../../../../../config/constants'
+import {COLORS} from '../../../../../config/constants'
 import {TabBarAdvancedButton} from './TabBarAdvencedButton'
 
 const item_size = Dimensions.get('window').width / 5
@@ -98,6 +98,8 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
+    borderBottomWidth: 15,
+    borderBottomColor: COLORS.primaryColor,
   },
   button: {
     flex: 1,

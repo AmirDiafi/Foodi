@@ -4,9 +4,9 @@ import Header from '../header'
 import {styles} from './styles'
 import {Animated} from 'react-native'
 
-export default function MainHeader({translateY}) {
+export default function MainHeader() {
   return (
-    <Animated.View style={{...styles.container, transform: [{translateY}]}}>
+    <Animated.View style={styles.container}>
       <Header />
       <SearchBar
         translateY={0}

@@ -1,13 +1,14 @@
-import {Dimensions} from 'react-native'
+import {Dimensions, Platform} from 'react-native'
 
 const {width} = Dimensions.get('window')
+const statusBarHeigth = Platform.OS === 'ios' ? 15 : 10
 
 const TAB_BAR_HEIGHT = 61
 const SEARCH_BAR_HEIGHT = 80
-const MAIN_HEADER_HEIGHT = 143
+const MAIN_HEADER_HEIGHT = 100 + statusBarHeigth
 const BORDER_RADIUS = 15
 const HERO_MAX_HEIGHT = width
-const HERO_MIN_HEIGHT = 65
+const HERO_MIN_HEIGHT = 90
 
 const COLORS = {
   primaryColor: '#f0f7fe',

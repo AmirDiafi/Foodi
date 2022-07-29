@@ -1,7 +1,6 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react'
 import {Animated, SafeAreaView} from 'react-native'
 import {styles} from '../style'
-import {MAIN_HEADER_HEIGHT, TAB_BAR_HEIGHT} from '../../../config/constants'
 import MainHeader from '../../components/MainHeader'
 import ScrollableItem from './scrollableItem/ScrollableItem'
 import ItemsList from '../../components/itemsList'
@@ -34,21 +33,10 @@ const ShopScreen = ({navigation}) => {
     [selectedId],
   )
 
-  const translateY = scrolling.interpolate({
-    inputRange: [0, MAIN_HEADER_HEIGHT],
-    outputRange: [0, -MAIN_HEADER_HEIGHT],
-    extrapolate: 'clamp',
-  })
-
   return (
     <SafeAreaView style={styles.container}>
-      <MainHeader translateY={translateY} />
       <Animated.ScrollView
         scrollEventThrottle={16}
-        contentContainerStyle={{
-          paddingTop: MAIN_HEADER_HEIGHT,
-          paddingBottom: TAB_BAR_HEIGHT,
-        }}
         onScroll={Animated.event(
           [
             {
@@ -61,6 +49,7 @@ const ShopScreen = ({navigation}) => {
           ],
           {useNativeDriver: true},
         )}>
+        <MainHeader />
         {MemoizedList}
 
         {isFetching ? (
